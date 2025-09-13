@@ -1,4 +1,5 @@
 # レッド・スター
 
 # フローチャート
-<img width="739" height="671" alt="Red・Star drawio" src="https://github.com/user-attachments/assets/c796cb84-a2b9-479e-b48d-61931c4b5c07" />
+
+<img width="740" height="671" alt="Red・Star drawio" src="https://github.com/user-attachments/assets/b78c051f-4b80-4562-800a-789b8f586344" />
