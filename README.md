@@ -50,6 +50,6 @@ IDLEを起動しFileメニューからNew Fileを選んで<br>
 新しくimagesというフォルダを作成しRed-Starのフォルダの中に保存<br>
 <br>
 **4. 画像をセットする**<br>
-Connect the Number用画像を保存する。<br>
+Red Sta用画像を保存する。<br>
 <br>
 
