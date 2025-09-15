@@ -68,3 +68,51 @@ import random
 **6. 定数の宣言**<br>
 ふつう、定数はプログラムの最初の部分で定義します（「宣言する」とも言います）。<br>
 定数と呼ばれる由来は、代入した値を変えずに使用するから。<br>
+
+**ソースコード**
+```
+FONT_COLOUR = (255, 255, 255)
+WIDTH = 800
+HEIGHT = 800
+CENTRE_X = WIDTH / 2
+CENTER_Y = HEIGHT / 2
+CENTRE = (CENTRE_X, CENTER_Y)
+FINAL_LEVEL = 6
+START_SPEED = 10
+COLOURS = ["green", "blue"]
+```
+
+**解説**
+```
+FONT_COLOUR = (255, 255, 255)
+```
+> [!NOTE]
+> ゲームの終わりに表示されるメッセージの文字の色を決めている。
+
+```
+WIDTH = 800
+HEIGHT = 800
+```
+
+> [!NOTE]
+> この2つの定数にはゲームの画面サイズが代入されている。
+
+```
+FINAL_LEVEL = 6
+```
+> [!NOTE]
+> ゲームのレベルをセット
+
+```
+START_SPEED = 10
+```
+
+> [!NOTE]
+> 星が下に動くスピードを決めている定数。
+
+```
+COLOURS = ["green", "blue"]
+```
+
+> [!NOTE]
+> クリックしてはいけない星の色はここで指定されている。
