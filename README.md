@@ -154,3 +154,64 @@ animations = []
 
 >[!NOTE]
 >この2つのリストで画面上の星をコントロールし続けます。
+
+> [!TIP]
+> **定数**<br>
+> プログラミングの定数は、最初に代入した値を変えてはいけない変数と考えることができます。<br>
+> プログラマーは定数の値を変えないよう、わざと大文字で名前をつけ、分かりやすくしています。<br>
+> このルールを「命名規則」と呼びます。<br>
+> このルールを守ってプログラミングしているから、ソースコードは見た目が似ていて理解しやすい。<br>
+
+**8. 星を描く**<br>
+関数を定義していきます。<br>
+draw()関数を使って星を描き、画面にメッセージを表示させます。<br>
+
+**ソースコード**
+
+```
+def draw():
+    global stars, current_level, game_over, game_complete
+    screen.clear()
+    screen.blit("space", (0, 0))
+    if geme_over:
+        display_message("GAME OVER!", "Try again.")
+    elif game_complete:
+        display_message("YOU WON!", "well done.")
+    else:
+        for star in stars:
+            star.draw()
+```
+
+**解説**
+
+```
+    global stars, current_level, game_over, game_complete
+```
+>[!NOTE]
+>この関数で使用するグローバル変数。
+
+```
+    screen.blit("space", (0, 0))
+```
+>[!NOTE]
+>この行でゲーム画面の背景画像をセットしています。
+
+```
+    if geme_over:
+        display_message("GAME OVER!", "Try again.")
+    elif game_complete:
+        display_message("YOU WON!", "well done.")
+```
+
+>[!NOTE]
+>ゲームオーバーになるかゲームがコンプリートされたときは、
+>この部分で画面にメッセージを表示させます。
+
+```
+    else:
+        for star in stars:
+            star.draw()
+```
+
+>[!NOTE]
+>このブロックが画面に星を描きます。
