@@ -122,3 +122,35 @@ COLOURS = ["green", "blue"]
 このゲームではグローバル変数を利用してゲームの進行をコントロールしていきます。<br>
 
 **ソースコード**
+```
+game_over = False
+game_complete = False
+current_level = 1
+stars =[]
+animations = []
+```
+
+**解説**
+
+```
+game_over = False
+game_complete = False
+```
+
+>[!NOTE]
+>これらの変数で、ゲームオーバーかどうかを判断します。
+
+```
+current_level = 1
+```
+
+>[!NOTE]
+>現在のプレイヤーのレベルを記録し続けます。
+
+```
+stars =[]
+animations = []
+```
+
+>[!NOTE]
+>この2つのリストで画面上の星をコントロールし続けます。
