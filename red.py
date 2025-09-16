@@ -9,3 +9,9 @@ CENTRE = (CENTRE_X, CENTER_Y)
 FINAL_LEVEL = 6
 START_SPEED = 10
 COLOURS = ["green", "blue"]
+
+game_over = False
+game_complete = False
+current_level = 1
+stars =[]
+animations = []
