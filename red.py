@@ -27,3 +27,8 @@ def draw():
     else:
         for star in stars:
             star.draw()
+
+def update():
+    global stars
+    if len(stars) == 0:
+        stars = make_stars(current_level)
