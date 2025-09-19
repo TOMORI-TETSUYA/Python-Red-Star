@@ -32,3 +32,10 @@ def update():
     global stars
     if len(stars) == 0:
         stars = make_stars(current_level)
+
+def make_stars(number_of_extra_stars):
+    colours_to_create = get_colours_to_create(unmber_of_extra_stars)
+    new_stars = create_stars(colours_to_create)
+    layout_stars(new_stars)
+    animate_stars(new_stars)
+    return new_stars
