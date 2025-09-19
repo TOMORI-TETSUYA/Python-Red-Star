@@ -249,3 +249,37 @@ def update():
 この関数は他の関数をいくつか呼び出すようになっています。
 
 **ソースコード**
+```
+def make_stars(number_of_extra_stars):
+    colours_to_create = get_colours_to_create(unmber_of_extra_stars)
+    new_stars = create_stars(colours_to_create)
+    layout_stars(new_stars)
+    animate_stars(new_stars)
+    return new_stars
+```
+
+**解説**
+```
+    colours_to_create = get_colours_to_create(unmber_of_extra_stars)
+```
+>[!NOTe]
+>星を描くために必要な、星の色のリストが戻り値になっている。
+
+```
+    new_stars = create_stars(colours_to_create)
+```
+>[!NOTE]
+>色のリストを引数にして、星ごとにアクターをを作成するための関数。
+
+```
+    layout_stars(new_stars)
+```
+>[!NOTE]
+>星を画面の決められた位置に置いていく関数。
+
+```
+    animate_stars(new_stars)
+```
+>[!NOTE]
+>星を画面下に向けて動かす関数。
+
