@@ -215,3 +215,31 @@ def draw():
 
 >[!NOTE]
 >このブロックが画面に星を描きます。
+
+**9. update()関数を定義する**<br>
+定義した``draw()``関数は星をあらかじめ作成しておかないと何も描かないです。<br>
+そこで**stars**リストに星が入っているかチェックし、入っていなければ<br>
+作ろうとする``update()``関数を定義します。<br>
+星が無いときは、``make_stars()``関数を呼び出すようになっています。<br>
+
+**ソースコード**
+```
+def update():
+    global stars
+    if len(stars) == 0:
+        stars = make_stars(current_level)
+```
+
+**解説**
+```
+    if len(stars) == 0:
+```
+
+>[!NOTE]
+>すでに星が作られてるかをここでチェックします。
+
+```
+        stars = make_stars(current_level)
+```
+>[!NOTE]
+>リスト**stars**に何も入ってないなら``make_stars()``の関数を呼び出す。
