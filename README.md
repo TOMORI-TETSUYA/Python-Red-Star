@@ -323,4 +323,4 @@ pgzrun
 画面には赤い星を必ず1個だけ表示する。<br>
 赤以外に緑と青の星を加えるため、**number_of_extra_stars**を引数にしてループを動かします。<br>
 追加する星の色を緑にするか青にするかはランダムに決める設定。<br>
-書いた**def get_colours_to_create(number_of_extra_stars)**のあとの**return []**のソースコードを書き換えていく。<br>
+書いた**def get_colours_to_create(number_of_extra_stars)** のあとの**return []** のソースコードを書き換えていく。<br>
