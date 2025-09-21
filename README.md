@@ -303,3 +303,15 @@ def layout_stars(stars_to_layout):
 def animate_stars(stars_to_animate):
     pass
 ```
+
+**12. ソースコードをテスト**<br>
+コマンドプロンプト（またはターミナル(PowerShell)）ウィンドウのコマンドラインから実行。<br>
+現段階では、まだ星は1つも画面に表示されない状態。<br>
+ここで書いたコードにバグがあるかチェックを行う。<br>
+
+```
+pgzrun
+```
+
+>[!NOTE]
+>``red.py``のファイルをドラッグして実行する。
