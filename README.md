@@ -197,7 +197,7 @@ def draw():
 >この行でゲーム画面の背景画像をセットしています。
 
 ```
-    if geme_over:
+    if game_over:
         display_message("GAME OVER!", "Try again.")
     elif game_complete:
         display_message("YOU WON!", "well done.")
@@ -251,7 +251,7 @@ def update():
 **ソースコード**
 ```
 def make_stars(number_of_extra_stars):
-    colours_to_create = get_colours_to_create(unmber_of_extra_stars)
+    colours_to_create = get_colours_to_create(number_of_extra_stars)
     new_stars = create_stars(colours_to_create)
     layout_stars(new_stars)
     animate_stars(new_stars)
@@ -289,3 +289,17 @@ def make_stars(number_of_extra_stars):
 **returm[]**で空っぽのリストを戻り値にしておきます。<br>
 ``layout_stars()``関数と``animate_stars()``関数はキーワードの**pass**を使って場所取りの設定を行っておく。
 
+**ソースコード**
+```
+def get_colours_to_create(number_of_extra_stars):
+    return []
+
+def create_stars(colours_to_create):
+    return []
+
+def layout_stars(stars_to_layout):
+    pass
+
+def animate_stars(stars_to_animate):
+    pass
+```
