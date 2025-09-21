@@ -197,7 +197,7 @@ def draw():
 >この行でゲーム画面の背景画像をセットしています。
 
 ```
-    if geme_over:
+    if game_over:
         display_message("GAME OVER!", "Try again.")
     elif game_complete:
         display_message("YOU WON!", "well done.")
@@ -251,7 +251,7 @@ def update():
 **ソースコード**
 ```
 def make_stars(number_of_extra_stars):
-    colours_to_create = get_colours_to_create(unmber_of_extra_stars)
+    colours_to_create = get_colours_to_create(number_of_extra_stars)
     new_stars = create_stars(colours_to_create)
     layout_stars(new_stars)
     animate_stars(new_stars)
@@ -283,3 +283,44 @@ def make_stars(number_of_extra_stars):
 >[!NOTE]
 >星を画面下に向けて動かす関数。
 
+**11. 関数のための場所取り**<br>
+ソースコードをテストする前に、必要なすべての関数を作成。<br>
+今のところは、``get_colours_to_create()``関数と``create_stars()``関数は<br>
+**returm[]**で空っぽのリストを戻り値にしておきます。<br>
+``layout_stars()``関数と``animate_stars()``関数はキーワードの**pass**を使って場所取りの設定を行っておく。
+
+**ソースコード**
+```
+def get_colours_to_create(number_of_extra_stars):
+    return []
+
+def create_stars(colours_to_create):
+    return []
+
+def layout_stars(stars_to_layout):
+    pass
+
+def animate_stars(stars_to_animate):
+    pass
+```
+
+**12. ソースコードをテスト**<br>
+コマンドプロンプト（またはターミナル(PowerShell)）ウィンドウのコマンドラインから実行。<br>
+現段階では、まだ星は1つも画面に表示されない状態。<br>
+ここで書いたコードにバグがあるかチェックを行う。<br>
+
+```
+pgzrun
+```
+
+>[!NOTE]
+>``red.py``のファイルをドラッグして実行する。
+
+**13. 色リストに色をセットする**<br>
+このゲームは、赤、青、緑いろの星を使用します。<br>
+まず文字列の「red」(赤)を1つ入れたリストを作成し、変数**colours_to_create**に代入します。<br>
+このリストは赤から始まることになる。<br>
+画面には赤い星を必ず1個だけ表示する。<br>
+赤以外に緑と青の星を加えるため、**number_of_extra_stars**を引数にしてループを動かします。<br>
+追加する星の色を緑にするか青にするかはランダムに決める設定。<br>
+書いた**def get_colours_to_create(number_of_extra_stars)**のあとの**return []**のソースコードを書き換えていく。<br>
