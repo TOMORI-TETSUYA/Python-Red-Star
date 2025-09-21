@@ -283,3 +283,9 @@ def make_stars(number_of_extra_stars):
 >[!NOTE]
 >星を画面下に向けて動かす関数。
 
+**11. 関数のための場所取り**<br>
+ソースコードをテストする前に、必要なすべての関数を作成。<br>
+今のところは、``get_colours_to_create()``関数と``create_stars()``関数は<br>
+**returm[]**で空っぽのリストを戻り値にしておきます。<br>
+``layout_stars()``関数と``animate_stars()``関数はキーワードの**pass**を使って場所取りの設定を行っておく。
+
