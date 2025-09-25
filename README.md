@@ -323,4 +323,41 @@ pgzrun
 画面には赤い星を必ず1個だけ表示する。<br>
 赤以外に緑と青の星を加えるため、**number_of_extra_stars**を引数にしてループを動かします。<br>
 追加する星の色を緑にするか青にするかはランダムに決める設定。<br>
-書いた**def get_colours_to_create(number_of_extra_stars)**のあとの**return []**のソースコードを書き換えていく。<br>
+書いた**def get_colours_to_create(number_of_extra_stars)** のあとの**return []** のソースコードを書き換えていく。<br>
+
+**ソースコード**
+
+```
+    colours_to_create = ["red"]
+    for i in range(0, number_of_extra_stars):
+        random_colour = random.choice(COLOURS)
+        colours_to_create.append(random_colour)
+    return colours_to_create
+```
+**解説**
+
+```
+    colours_to_create = ["red"]
+```
+
+>[!NOTE]
+>リストの最初の星を赤色に指定しています。<br>
+
+```
+    for i in range(0, number_of_extra_stars):
+```
+>[!NOTE]
+>ループが実行されるとiに１が加えられて、iの値がrangeの範囲内のうちはループが繰り返されます。<br>
+
+```
+        random_colour = random.choice(COLOURS)
+```
+>[!NOTE]
+>星を加えるごとに色を1つランダムに決めます。
+
+```
+        colours_to_create.append(random_colour)
+```
+
+>[!NOTE]
+>リストに決められた色を追加します。
