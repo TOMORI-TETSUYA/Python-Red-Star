@@ -55,7 +55,12 @@ def create_stars(colours_to_create):
     return new_stars
 
 def layout_stars(stars_to_layout):
-    pass
-
+    number_of_gaps = len(stars_to_layout) + 1
+    gap_size = WIDTH / number_of_gaps
+    random.shuffle(stars_to_layout)
+    for index, star in enumerate(stars_to_layout):
+        new_x_pos = (index + 1) * gap_size
+        star.x = new_x_pos
+    
 def animate_stars(stars_to_animate):
     pass
