@@ -463,3 +463,4 @@ pgzrun
 **17. テストのし直し**
 再度プログラムを実行して画面がどのように変わるか確認します。
 
+<img width="802" height="632" alt="タイトルなし" src="https://github.com/user-attachments/assets/4262aa63-d4c3-4ca6-b4fe-46ba51e53da5" />
