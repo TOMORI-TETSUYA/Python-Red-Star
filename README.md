@@ -367,3 +367,41 @@ pgzrun
 そして``colours_to_create``というリストのアイテムをループで取り出しながら、指定されている色で新しい星のアクターを作成します。<br>
 作成した星をリスト``new_stars``に入れていく。<br>
 ``def create_stars(colours_to_create)``の後の``return[]``を書き換えていく。<br>
+
+**ソースコード**
+```
+    new_stars = []
+    for colour in colours_to_create:
+        star = Actor(colour + "-star")
+        new_stars.append(star)
+    return new_stars
+```
+
+**解説**
+
+```
+    new_stars = []
+```
+
+>[!NOTE]
+>新しく作成した星を入れる為のリスト<br>
+
+```
+    for colour in colours_to_create:
+```
+
+>[!NOTE]
+>``colours_to_create``のアイテムを取り出しながらループをっ実行します。<br>
+
+```
+        star = Actor(colour + "-star")
+```
+
+>[!NOTE]
+>2つの文字列をつないています。<br>
+
+```
+    return new_stars
+```
+>[!NOTE]
+>更新した``new_stars``リストを返しています。<br>
