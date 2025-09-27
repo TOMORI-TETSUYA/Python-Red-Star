@@ -367,3 +367,96 @@ pgzrun
 そして``colours_to_create``というリストのアイテムをループで取り出しながら、指定されている色で新しい星のアクターを作成します。<br>
 作成した星をリスト``new_stars``に入れていく。<br>
 ``def create_stars(colours_to_create)``の後の``return[]``を書き換えていく。<br>
+
+**ソースコード**
+```
+    new_stars = []
+    for colour in colours_to_create:
+        star = Actor(colour + "-star")
+        new_stars.append(star)
+    return new_stars
+```
+
+**解説**
+
+```
+    new_stars = []
+```
+
+>[!NOTE]
+>新しく作成した星を入れる為のリスト<br>
+
+```
+    for colour in colours_to_create:
+```
+
+>[!NOTE]
+>``colours_to_create``のアイテムを取り出しながらループをっ実行します。<br>
+
+```
+        star = Actor(colour + "-star")
+```
+
+>[!NOTE]
+>2つの文字列をつないています。<br>
+
+```
+    return new_stars
+```
+>[!NOTE]
+>更新した``new_stars``リストを返しています。<br>
+
+**15. 試してみる**<br>
+ソースコードにバグが入りこんでいないかチェック。<br>
+ソースコードのファイルをSAVEして、コマンドラインから実行します。<br>
+
+**16. 星を置く**<br>
+``layout_stars()``関数を使ってすべての星を画面に配置します。<br>
+まず星と星の間の、何もない隙間を何か所作るか決めなければならい。<br>
+隙間の幅は、画面の幅を隙間の合計数で割って計算します。<br>
+そして赤い星がいつも決まった位置に置かないよう、星のリストを**shuffle(シャッフル)** しておかないといけない。<br>
+``def layout_stars(stars_to_layout)``のあとの**pass**を書き換えていきます。<br>
+
+**ソースコード**
+```
+    number_of_gaps = len(stars_to_layout) + 1
+    gap_size = WIDTH / number_of_gaps
+    random.shuffle(stars_to_layout)
+    for index, star in enumerate(stars_to_layout):
+        new_x_pos = (index + 1) * gap_size
+        star.x = new_x_pos
+```
+
+**解説**
+
+```
+    number_of_gaps = len(stars_to_layout) + 1
+```
+
+>[!NOTE]
+>画面上に作る隙間の数を計算しています。<br>
+
+```
+    gap_size = WIDTH / number_of_gaps
+```
+
+>[!NOTE]
+>画面の幅を隙間の数で割っています。<br>
+
+```
+    random.shuffle(stars_to_layout)
+```
+
+>[!NOTE]
+>星のリストをシャッフルして、水平(左右)方向の位置（X座標）がランダムになるように設定しています。<br>
+
+```
+    for index, star in enumerate(stars_to_layout):
+        new_x_pos = (index + 1) * gap_size
+        star.x = new_x_pos
+```
+
+>[!NOTE]
+>このブロックは現在処理している星を、画面左端から（リスト内での順番+1）＊（隙間の幅）だけ右に離して置いています。<br>
+>リスト内の順番は0から始まります。<br>
+
