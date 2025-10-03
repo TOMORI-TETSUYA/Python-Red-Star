@@ -479,4 +479,7 @@ pgzrun
 > 画面上での図形の位置を決めるときに使う特別な点です。<br>
 > 例えば四角形のアンカー左下の頂点だとしておきます。<br>
 > この四角形を座標(0，0)になるように置くということです。<br>
-![名称未設定 1](https://github.com/user-attachments/assets/0b669ca7-602e-4017-a1c6-3b0fca582a0c)
+![名称未設定 1](https://github.com/user-attachments/assets/d6f84550-97f9-41a2-8fa9-e4cd2ab4b125)
+
+**ソースコード**
+
