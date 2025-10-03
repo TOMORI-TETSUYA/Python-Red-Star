@@ -472,3 +472,5 @@ pgzrun
 フレームの表示時間が短いと早く動いているように見えます。<br>
 また「アンカー」は星の底に設定しておき、画面下に星が着いたとたん動くのをやめるようにしておきます。<br>
 ソースコード``def animate_stars(stars_to_animate)``のあとの**pass**を書き換えていきます。<br>
+
+<div style="margin:0em ;display:inline-block;position:relative;top:3px;padding:0 .5em;height:1.5em;line-height:1.5em;color:#ffffff;background:#ffc0c0;font-weight:bold;text-align:center;border-radius:5px 5px 0 0;">＊タイトル</div><div style="background:rgba(255,255,255,0);border:solid 3px #ffc0c0;border-radius:0 5px 5px;padding:20px;font-size: 100%;">ここに本文を入れます♪</div>
