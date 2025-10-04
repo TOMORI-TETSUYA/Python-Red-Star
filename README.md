@@ -482,4 +482,32 @@ pgzrun
 ![名称未設定 1](https://github.com/user-attachments/assets/d6f84550-97f9-41a2-8fa9-e4cd2ab4b125)
 
 **ソースコード**
+```
+    duration = START_SPEED - current_level
+    star.anchor = ("center", "bottom")
+    animation = animate(star, duration=duration, on_finished=handle_game_over, y=HEIGHT)
+    animations.append(animation)
+```
+
+**解説**
+
+```
+    duration = START_SPEED - current_level
+```
+>[!NOTE]
+>最初にセットされているスピードから現在のレベルを引いた値を、フレームが表示される時間にしています。<br>
+>値が小さければ星は早く動く<br>
+
+```
+    star.anchor = ("center", "bottom")
+```
+>[!NOTE]
+>星のアンカーを画像の一番下にしています。<br>
+
+```
+    animation = animate(star, duration=duration, on_finished=handle_game_over, y=HEIGHT)
+```
+>[!NOTE]
+>アニメーションの処理が終わったときに``handle_game_over()``関数を呼び出すよう指示ｓています。
+
 
