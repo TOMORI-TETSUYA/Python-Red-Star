@@ -483,10 +483,11 @@ pgzrun
 
 **ソースコード**
 ```
-    duration = START_SPEED - current_level
-    star.anchor = ("center", "bottom")
-    animation = animate(star, duration=duration, on_finished=handle_game_over, y=HEIGHT)
-    animations.append(animation)
+    for star in stars_to_animate:
+        duration = START_SPEED - current_level
+        star.anchor = ("center", "bottom")
+        animation = animate(star, duration=duration, on_finished=handle_game_over, y=HEIGHT)
+        animations.append(animation)
 ```
 
 **解説**
@@ -538,3 +539,5 @@ def handle_game_over():
 > 例えば座標(0, 0)にいるアクターを(100, 0)まで動かすということは、アクターを100ピクセル右に動かすことになる。
 > フレームは**duration**で指定した時間だけつぎつぎに表示されていく。
 > 同じ枚数のフレームを長く表示(**duration**の値が大きい)すれば、アクターはゆっくり動きます。
+![名称未設定 1](https://github.com/user-attachments/assets/7ca9ee8c-87eb-4385-a827-70eaa2d64c45)
+
