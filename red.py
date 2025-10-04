@@ -72,3 +72,12 @@ def animate_stars(stars_to_animate):
 def handle_game_over():
     global game_over
     game_over = True
+
+def on_mouse_down(pos):
+    global stars, current_level
+    for star in stars:
+        if star.collidepoint(pos):
+            if "red" in star.image:
+                red_star_click()
+            else:
+                handle_game_over()
