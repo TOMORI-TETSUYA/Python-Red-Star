@@ -460,6 +460,54 @@ pgzrun
 >このブロックは現在処理している星を、画面左端から（リスト内での順番+1）＊（隙間の幅）だけ右に離して置いています。<br>
 >リスト内の順番は0から始まります。<br>
 
-**17. テストのし直し**
+**17. テストのし直し**<br>
 再度プログラムを実行して画面がどのように変わるか確認します。
+
+<img width="802" height="632" alt="タイトルなし" src="https://github.com/user-attachments/assets/4262aa63-d4c3-4ca6-b4fe-46ba51e53da5" />
+
+**18. 星を動かす**<br>
+星を動かしていきます。<br>
+ゲームらしくしていきため、それぞれの星を画面の下に向けて動かしていきます。<br>
+星を動かすときに1つの画面(アニメーションでは「フレーム」と呼びます)をどれだけの時間を表示しておくかを決めておき、レベルが上がったら星のスピードを上げられるようにしておきます。<br>
+フレームの表示時間が短いと早く動いているように見えます。<br>
+また「アンカー」は星の底に設定しておき、画面下に星が着いたとたん動くのをやめるようにしておきます。<br>
+ソースコード``def animate_stars(stars_to_animate)``のあとの**pass**を書き換えていきます。<br>
+
+> [!TIP]
+> **アンカー**<br>
+> PCのグラフィックでは図形のある1点を「アンカー」と呼んでいます。<br>
+> 画面上での図形の位置を決めるときに使う特別な点です。<br>
+> 例えば四角形のアンカー左下の頂点だとしておきます。<br>
+> この四角形を座標(0，0)になるように置くということです。<br>
+![名称未設定 1](https://github.com/user-attachments/assets/d6f84550-97f9-41a2-8fa9-e4cd2ab4b125)
+
+**ソースコード**
+```
+    duration = START_SPEED - current_level
+    star.anchor = ("center", "bottom")
+    animation = animate(star, duration=duration, on_finished=handle_game_over, y=HEIGHT)
+    animations.append(animation)
+```
+
+**解説**
+
+```
+    duration = START_SPEED - current_level
+```
+>[!NOTE]
+>最初にセットされているスピードから現在のレベルを引いた値を、フレームが表示される時間にしています。<br>
+>値が小さければ星は早く動く<br>
+
+```
+    star.anchor = ("center", "bottom")
+```
+>[!NOTE]
+>星のアンカーを画像の一番下にしています。<br>
+
+```
+    animation = animate(star, duration=duration, on_finished=handle_game_over, y=HEIGHT)
+```
+>[!NOTE]
+>アニメーションの処理が終わったときに``handle_game_over()``関数を呼び出すよう指示ｓています。
+
 
