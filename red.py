@@ -63,10 +63,11 @@ def layout_stars(stars_to_layout):
         star.x = new_x_pos
     
 def animate_stars(stars_to_animate):
-    duration = START_SPEED - current_level
-    star.anchor = ("center", "bottom")
-    animation = animate(star, duration=duration, on_finished=handle_game_over, y=HEIGHT)
-    animations.append(animation)
+    for star in stars_to_animate:
+        duration = START_SPEED - current_level
+        star.anchor = ("center", "bottom")
+        animation = animate(star, duration=duration, on_finished=handle_game_over, y=HEIGHT)
+        animations.append(animation)
 
 def handle_game_over():
     global game_over
