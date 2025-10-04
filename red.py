@@ -67,3 +67,7 @@ def animate_stars(stars_to_animate):
     star.anchor = ("center", "bottom")
     animation = animate(star, duration=duration, on_finished=handle_game_over, y=HEIGHT)
     animations.append(animation)
+
+def handle_game_over():
+    global game_over
+    game_over = True
