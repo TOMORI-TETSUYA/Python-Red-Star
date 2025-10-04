@@ -483,10 +483,11 @@ pgzrun
 
 **ソースコード**
 ```
-    duration = START_SPEED - current_level
-    star.anchor = ("center", "bottom")
-    animation = animate(star, duration=duration, on_finished=handle_game_over, y=HEIGHT)
-    animations.append(animation)
+    for star in stars_to_animate:
+        duration = START_SPEED - current_level
+        star.anchor = ("center", "bottom")
+        animation = animate(star, duration=duration, on_finished=handle_game_over, y=HEIGHT)
+        animations.append(animation)
 ```
 
 **解説**
