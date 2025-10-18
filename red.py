@@ -81,3 +81,13 @@ def on_mouse_down(pos):
                 red_star_click()
             else:
                 handle_game_over()
+
+def red_star_click():
+    global current_level, stars, animations, game_complete
+    stop_animations(animations)
+    if current_level == FINAL_LEVEL:
+        game_complete = True
+    else:
+        current_level = current_level + 1
+        stars = []
+        animations = []
