@@ -581,3 +581,54 @@ def on_mouse_down(pos):
 >[!NOTE]
 >プレイヤーが赤い以外の色の星をクリックすると、関数が呼び出されます
 
+**21. 赤い星をクリックしたとき**<br>
+<br>
+プレイヤーが赤い星をクリックすると、プログラムは現在の星の並びを動かすのをやめて、<br>
+次のレベルに移ることになる。<br>
+もしプレイヤーが最終レベルだったら``game_complete``に**True**がセットされてゲーム終了になります。<br>
+
+**ソースコード**
+
+```
+def red_star_click():
+    global current_level, stars, animations, game_complete
+    stop_animations(animations)
+    if current_level == FINAL_LEVEL:
+        game_complete = True
+    else:
+        current_level = current_level + 1
+        stars = []
+        animations = []
+```
+
+**解説**
+
+```
+    stop_animations(animations)
+```
+
+>[!NOTE]
+>プレイヤーが赤い星をクリックしたときにアニメーションを止める関数<br>
+
+```
+    if current_level == FINAL_LEVEL:
+        game_complete = True
+```
+
+>[!NOTE]
+>プレイヤーが最終レベルのときはこのブロックが実行されます
+
+```
+        current_level = current_level + 1
+```
+>[!NOTE]
+>レベルを1つ上げます
+
+
+```
+        stars = []
+        animations = []
+```
+
+>[!NOTE]
+>このブロックは星とアニメーションの設定を直しています
