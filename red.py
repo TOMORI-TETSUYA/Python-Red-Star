@@ -91,3 +91,8 @@ def red_star_click():
         current_level = current_level + 1
         stars = []
         animations = []
+
+def stop_animations(animations_to_stop):
+    for animation in animations_to_stop:
+        if animation.running:
+            animatiion.stop()
