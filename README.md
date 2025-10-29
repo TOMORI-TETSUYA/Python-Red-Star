@@ -637,5 +637,14 @@ def red_star_click():
 ``stop_animations()``関数を定義します。<br>
 リストを使ったループで動かされている星の動きを止めため、動いているアニメーションごとに``stop()``関数を呼び出します。<br>
 
-**解説**
+**ソースコード**
+
+```
+def stop_animations(animations_to_stop):
+    for animation in animations_to_stop:
+        if animation.running:
+            animatiion.stop()
+```
+
+
 
