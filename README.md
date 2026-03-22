@@ -73,10 +73,10 @@ import random
 ```
 FONT_COLOUR = (255, 255, 255)
 WIDTH = 800
-HEIGHT = 800
+HEIGHT = 600
 CENTRE_X = WIDTH / 2
-CENTER_Y = HEIGHT / 2
-CENTRE = (CENTRE_X, CENTER_Y)
+CENTRE_Y = HEIGHT / 2
+CENTRE = (CENTRE_X, CENTRE_Y)
 FINAL_LEVEL = 6
 START_SPEED = 10
 COLOURS = ["green", "blue"]
@@ -643,7 +643,7 @@ def red_star_click():
 def stop_animations(animations_to_stop):
     for animation in animations_to_stop:
         if animation.running:
-            animatiion.stop()
+            animation.stop()
 ```
 
 
