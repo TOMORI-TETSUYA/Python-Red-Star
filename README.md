@@ -12,7 +12,7 @@
 赤以外の色の星をクリックか、星が画面の一番下に着いてしまうとゲームオーバー。<br>
 
 # フローチャート
-<img width="740" height="671" alt="Red・Star drawio" src="https://github.com/user-attachments/assets/f600496a-365e-4435-ba01-fb9bc374f348" />
+![フローチャート](img\489089712-f600496a-365e-4435-ba01-fb9bc374f348.png)
 
 ## 事前準備
 
@@ -41,7 +41,7 @@ python -m pip install -U pip
 **1. 準備**<br>
 IDLEを起動しFileメニューからNew Fileを選んで<br>
 新しいファイルを作成する。<br>
-<img width="204" height="308" alt="スクリーンショット 2025-09-07 072707" src="https://github.com/user-attachments/assets/a817ac8b-b29d-442b-a2c4-761a8657a1a6" />
+![メニュー](img\486466234-a817ac8b-b29d-442b-a2c4-761a8657a1a6.png)
 <br>
 **2. セーブする**<br>
 フォルダーを新しく作成し、**Fileメニュー**内の**Save As**を選び**red.py**という名前で保存。<br>
@@ -73,10 +73,10 @@ import random
 ```
 FONT_COLOUR = (255, 255, 255)
 WIDTH = 800
-HEIGHT = 600
+HEIGHT = 800
 CENTRE_X = WIDTH / 2
-CENTRE_Y = HEIGHT / 2
-CENTRE = (CENTRE_X, CENTRE_Y)
+CENTER_Y = HEIGHT / 2
+CENTRE = (CENTRE_X, CENTER_Y)
 FINAL_LEVEL = 6
 START_SPEED = 10
 COLOURS = ["green", "blue"]
@@ -463,8 +463,7 @@ pgzrun
 **17. テストのし直し**<br>
 再度プログラムを実行して画面がどのように変わるか確認します。
 
-<img width="802" height="632" alt="タイトルなし" src="https://github.com/user-attachments/assets/4262aa63-d4c3-4ca6-b4fe-46ba51e53da5" />
-
+![テスト画面](img/494797738-4262aa63-d4c3-4ca6-b4fe-46ba51e53da5.png)
 **18. 星を動かす**<br>
 星を動かしていきます。<br>
 ゲームらしくしていきため、それぞれの星を画面の下に向けて動かしていきます。<br>
@@ -479,7 +478,7 @@ pgzrun
 > 画面上での図形の位置を決めるときに使う特別な点です。<br>
 > 例えば四角形のアンカー左下の頂点だとしておきます。<br>
 > この四角形を座標(0，0)になるように置くということです。<br>
-![名称未設定 1](https://github.com/user-attachments/assets/d6f84550-97f9-41a2-8fa9-e4cd2ab4b125)
+![アンカー](img/497366056-d6f84550-97f9-41a2-8fa9-e4cd2ab4b125.jpg)
 
 **ソースコード**
 ```
@@ -539,7 +538,7 @@ def handle_game_over():
 > 例えば座標(0, 0)にいるアクターを(100, 0)まで動かすということは、アクターを100ピクセル右に動かすことになる。<br>
 > フレームは**duration**で指定した時間だけつぎつぎに表示されていく。<br>
 > 同じ枚数のフレームを長く表示(**duration**の値が大きい)すれば、アクターはゆっくり動きます。<br>
-![名称未設定 1](https://github.com/user-attachments/assets/7ca9ee8c-87eb-4385-a827-70eaa2d64c45)
+![animate()関数](img/497378278-7ca9ee8c-87eb-4385-a827-70eaa2d64c45.jpg)
 
 **20. マウスのクリック**<br>
 プレイヤーの入力を受けつけるようにします。<br>
@@ -643,49 +642,8 @@ def red_star_click():
 def stop_animations(animations_to_stop):
     for animation in animations_to_stop:
         if animation.running:
-            animation.stop()
+            animatiion.stop()
 ```
 
-**23. メッセージの表示**<br>
-ステップ8で書いたメッセージをゲーム終了時に表示するための関数を定義します。<br>
-ステップ22のソースコードに続けて、ソースコードでは「``crntre``」と「``color``」になっているところがある。<br>
-入力ミスをしないように気を付けよう。
 
-**ソースコード**
 
-```
-def display_message(heading_text, sub_heading_text):
-    screen.draw.text(heading_text, fontsize=60, center=CENTRE, color=FONT_COLOUR)
-    screen.draw.text(sub_heading_text,
-                     fontsize=30,
-                     center=(CENTRE_X, CENTRE_Y + 30),
-                     color=FONT_COLOUR)
-```
-
->[!NOTE]
->スペルがアメリカ英語とイギリス英語ではちがうから気を付けよう<br>
-
-```
-screen.draw.text(heading_text, fontsize=60, center=CENTRE, color=FONT_COLOUR)<br>
-```
-
->[!NOTE]
->ゲーム終了時に画面にテキストを表示するための命令です。
-```
-    screen.draw.text(heading_text, fontsize=60, center=CENTRE, color=FONT_COLOUR)
-    screen.draw.text(sub_heading_text,
-```
-
->[!NOTE]
->メッセージの2行目の位置を指定しています。
-```
-                     center=(CENTRE_X, CENTRE_Y + 30),
-```
-
-**24. ゲームをプレイ**<br>
-これでプログラミングは終了<br>
-プログラムを``SAVE``して``IDLE``ファイルをコマンドラインから実行しましょう。<br>
-
-```
-pgzrun "ディレクトリ\red.py"
-```
