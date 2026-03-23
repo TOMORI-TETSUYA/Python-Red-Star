@@ -685,7 +685,7 @@ screen.draw.text(heading_text, fontsize=60, center=CENTRE, color=FONT_COLOUR)
 
 **24. ゲームをプレイ**<br>
 これでプログラミングは終了<br>
-プログラムをSAVEしてIDLEファイルをコマンドラインから実行しましょう。<br>
+プログラムを``SAVE``して``IDLE``ファイルをコマンドラインから実行しましょう。<br>
 
 ```
 pgzrun "ディレクトリ\red.py"
