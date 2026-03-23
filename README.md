@@ -645,5 +645,52 @@ def stop_animations(animations_to_stop):
             animatiion.stop()
 ```
 
+**23. メッセージの表示**<br>
+ステップ8で書いたメッセージをゲーム終了時に表示するための関数を定義します。<br>
+ステップ22のソースコードに続けて、ソースコードでは``「crntre」``と``「color」``になっているところがある。<br>
+入力ミスをしないように気を付けよう。<br>
+
+**ソースコード**
+
+```
+def display_message(heading_text, sub_heading_text):
+    screen.draw.text(heading_text, fontsize=60, center=CENTRE, color=FONT_COLOUR)
+    screen.draw.text(sub_heading_text,
+                     fontsize=30,
+                     center=(CENTRE_X, CENTRE_Y + 30),
+                     color=FONT_COLOUR)
+```
+
+>[!NOTE]
+>スペルがアメリカ英語とイギリス英語ではちがうから気を付けよう
+
+```
+screen.draw.text(heading_text, fontsize=60, center=CENTRE, color=FONT_COLOUR)
+```
+
+>[!NOTE]
+>ゲーム終了時に画面にテキストを表示するための命令です。
+
+```
+    screen.draw.text(heading_text, fontsize=60, center=CENTRE, color=FONT_COLOUR)
+    screen.draw.text(sub_heading_text,
+```
+
+>[!NOTE]
+>メッセージの2行目の位置を指定しています。
+
+```
+                     center=(CENTRE_X, CENTRE_Y + 30),
+```
+
+**24. ゲームをプレイ**<br>
+これでプログラミングは終了<br>
+プログラムをSAVEしてIDLEファイルをコマンドラインから実行しましょう。<br>
+
+```
+pgzrun "ディレクトリ\red.py"
+```
+
+
 
 
